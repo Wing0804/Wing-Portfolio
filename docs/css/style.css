@@ -171,7 +171,7 @@ a:hover {
 
 .subline01 {
     position: absolute;
-    bottom: 52%;
+    bottom: 50%;
     left: 46%;
     transform: rotate(-20deg);
     color: #ffffff;
@@ -194,7 +194,6 @@ a:hover {
 .content {
     width: 80%;
     height: auto;
-    margin-bottom: 50px;
     margin-left: 10%;
 }
 
@@ -259,12 +258,12 @@ a:hover {
 }
 
 .footer-image {
-    width: 13%;
-    margin-bottom: 2%;
-    margin-left: 87%;
+    width: 15%;
+    text-align: right;
+    min-width: 180px;
 }
 
-.unite-logo {
+.website-logo {
     display: block;
     width: 50%;
     min-width: 150px;
@@ -272,7 +271,7 @@ a:hover {
     margin-bottom: 30px;
 }
 
-#b {
+.link-btn {
     display: block;
     width: 128px;
     margin: 0 auto;
@@ -287,8 +286,8 @@ a:hover {
     text-decoration: none;
 }
 
-#b:hover {
-    color: rgb(255, 255, 255);
+.link-btn:hover {
+    opacity: 0.7;
 }
 
 /* interests */
@@ -306,6 +305,7 @@ Flexboxを指定"space-between"で各アイテムを均等に配置し、
     position: relative;
     margin: 2em auto;
     margin-top: 50px;
+    margin-bottom: 0;
     -ms-flex-pack: justify;
     -ms-flex-wrap: wrap;
     -webkit-box-pack: justify;
@@ -332,7 +332,8 @@ a.card-link {
 .card-title {
     margin: .6em 0 0;
     color: #333333;
-    font-size: 1.8em;
+    font-size: 18px;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -343,27 +344,39 @@ a.card-link {
     color: #818181;
 }
 
+.card-text {
+    margin-top: 25px;
+    font-size: 16px;
+}
+
 /* カードレイアウトを1カラムで配置 */
 .card-list {
-    width: 96%;
-    margin: .5em auto;
+    width: 100%;
+    margin: 0 0 50px auto;
     padding: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .08);
     background: #f0f0f0;
 }
 
 /* 画面幅768px以上の場合カードレイアウトを2カラムで配置 */
-@media all and (min-width: 768px) {
+@media all and (min-width: 700px) {
     .card-list {
         width: calc(90% / 2); /* 96%幅を2で割るという指定 */
-        margin: .5em 0;
+        margin: 0 0;
+        margin-bottom: 50px;
+    }
+
+    .card-list-bottom {
+        margin-bottom: 0px;
     }
 }
 
 /* 画面幅992px以上の場合カードレイアウトを3カラムで配置 */
-@media all and (min-width: 992px) {
+@media all and (min-width: 1000px) {
     .card-list {
         width: calc(90% / 3); /* 96%幅を3で割るという指定 */
+        margin: 0 0;
+        margin-bottom: 50px;
     }
 
     /* 最後の行が3列より少ない場合左寄せにレイアウトさせる */
@@ -447,27 +460,33 @@ a.card-link {
 
 /* footer　*/
 
-.top-back {
-    width: 70px;
+#pageTop {
+    width: 6%;
+    min-width: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 15px;
+    margin-bottom: -7px;
+    opacity: 0.7;
 }
 
-#pageTop {
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
+.top-back {
+    width: 100%;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
 }
 
 footer {
     bottom: 0; /*下に固定*/
     width: 100%;
-    height: 10vh;
+    height: 12vh;
     background-color: rgb(17, 0, 94);
 }
 
 .foot {
     color: rgb(255, 255, 255);
     font-size: 16px;
-    line-height: 10vh;
+    line-height: 12vh;
     text-align: center;
 }
 
@@ -500,8 +519,16 @@ footer {
     }
 
     .poster-image {
-        width: 300px;
+        width: 280px;
         padding: 0 20px 20px;
+    }
+
+    .images-test {
+        width: 50%;
+        height: 600px;
+        overflow: scroll;
+        min-width: 350px;
+        margin-bottom: 20px;
     }
 }
 
@@ -546,8 +573,15 @@ footer {
 
     .images {
         width: 90%;
-        min-width: 200px;
         margin-bottom: 35px;
+    }
+
+    .images-test {
+        width: 90%;
+        height: 300px;
+        overflow: scroll;
+        min-width: 200px;
+        margin-bottom: 50px;
     }
 
     .initial {
@@ -560,9 +594,11 @@ footer {
         margin-left: 10%;
         padding-bottom: 20px;
     }
+
 }
 
 @media screen and (max-width: 600px) {
+
     .header-logo {
         margin-top: 25px;
         font-size: 30px;
@@ -574,11 +610,15 @@ footer {
 
     .background-header {
         width: 100%;
-        height: 116px;
+        height: 120px;
         background-image: url(../images/hea-r.jpg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+    }
+
+    .space {
+        margin-top: 160px;
     }
 
     .page-title {
@@ -587,7 +627,6 @@ footer {
 
     .title-text {
         font-size: 16px;
-        font-weight: bold;
     }
 
     .works-genre {
@@ -602,6 +641,8 @@ footer {
     }
 
     .content-leaflet {
+        width: 100%;
+        padding: 0;
         margin-bottom: initial;
     }
 
@@ -623,6 +664,7 @@ footer {
     }
 
     .foot2 {
+        bottom: 25px;
         right: 10%;
         margin: 0 auto;
         font-size: 24px;
@@ -697,7 +739,13 @@ footer {
 
     .initial {
         margin-top: 0px;
-        margin-bottom: 20px;
+        margin-bottom: 80px;
+    }
+
+    .fixed {
+        margin-top: -160px;
+        position: fixed;
+        z-index: 9999;
     }
 }
 
@@ -705,6 +753,7 @@ footer {
     .header-nav-p {
         display: none;
     }
+
     .phone {
         display: none;
     }

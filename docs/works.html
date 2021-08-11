@@ -29,7 +29,7 @@
     </script>
   </head>
   <body class="background-works">
-    <header class="background-header w">
+    <header class="background-header fixed">
       <h1 class="header-logo pc">Wing's<br>Portfolio</h1>
       <h1 class="header-logo phone">Wing's <br>Portfolio</h1>
       <section class="header-nav">
@@ -52,18 +52,18 @@
       </section>
     </header>
     <main>
-      <section class="content">
+      <section class="content space">
         <h1 class="page-title">Works</h1>
-        <div class="title-text">今まで製作してきたものを掲載しています。</div>
+        <div class="title-text"><div style="display:inline-block; text-align: left;">今まで製作してきたものを掲載しています。</div></div>
         <br>
         <h1 class="works-genre">Poster<div class="underline"></div></h1>
         <div class="content-poster">
-          <a href="images/tekuteku 2.jpg" data-lightbox="poster-1"><img src="images/tekuteku 2.jpg" alt="Poster1" class="poster-image"></a>
-          <a href="images/hatsumoude.jpg" data-lightbox="poster-2"><img src="images/hatsumoude.jpg" alt="Poster2" class="poster-image"></a>
-          <a href="images/amami restart 2.jpg" data-lightbox="poster-3"><img src="images/amami restart 2.jpg" alt="Poster2" class="poster-image"></a>
-          <a href="images/オフロード.jpg" data-lightbox="poster-4"><img src="images/オフロード.jpg" alt="Poster2" class="poster-image"></a>
-          <a href="images/fun track2.jpg" data-lightbox="poster-5"><img src="images/fun track2.jpg" alt="Poster2" class="poster-image"></a>
-          <a href="images/ポスター.jpg" data-lightbox="poster-6"><img src="images/ポスター.jpg" alt="Poster2" class="poster-image"></a>
+          <a href="images/tekuteku 2.jpg" data-lightbox="poster"><img src="images/tekuteku 2.jpg" alt="Poster1" class="poster-image"></a>
+          <a href="images/hatsumoude.jpg" data-lightbox="poster"><img src="images/hatsumoude.jpg" alt="Poster2" class="poster-image"></a>
+          <a href="images/amami restart 2.jpg" data-lightbox="poster"><img src="images/amami restart 2.jpg" alt="Poster3" class="poster-image"></a>
+          <a href="images/オフロード.jpg" data-lightbox="poster"><img src="images/オフロード.jpg" alt="Poster4" class="poster-image"></a>
+          <a href="images/fun track2.jpg" data-lightbox="poster"><img src="images/fun track2.jpg" alt="Poster5" class="poster-image"></a>
+          <a href="images/ポスター.jpg" data-lightbox="poster"><img src="images/ポスター.jpg" alt="Poster6" class="poster-image"></a>
         </div>
         <h1 class="works-genre">Leaflet<div class="underline"></div></h1>
         <section>
@@ -89,23 +89,34 @@
         <h1 class="works-genre">Website<div class="underline"></div></h1>
         <div class="content-leaflet">
           <div class="text">
-            <img src="images/logo.png" alt="unite logo" class="unite-logo">
+            <img src="images/logo.png" alt="unite logo" class="website-logo">
             <div>
               外出時に車椅子で困った事をきっかけに、「Special Needsに特化した、スポット情報共有サイト」を作りました。
               利用者は互いに外出先のバリアフリー情報を共有し、外出の際の参考にしてもらうことが目的。
             </div>
-            <a href="https://unite-place.herokuapp.com/" id="b">詳しくはこちら</a>
+            <a href="https://unite-place.herokuapp.com/" class="link-btn">詳しくはこちら</a>
           </div>
-          <ul class="images slider initial">
-            <a href="images/unite1.jpg" data-lightbox="website"><img src="images/unite1.jpg" alt="Leaflet1" width="100%"></a>
-            <a href="images/unite2.jpg" data-lightbox="website"><img src="images/unite2.jpg" alt="Leaflet2" width="100%"></a>
+          <ul class="images slider">
+            <a href="images/unite1.jpg" data-lightbox="unite"><img src="images/unite1.jpg" alt="unite1" width="100%"></a>
+            <a href="images/unite2.jpg" data-lightbox="unite"><img src="images/unite2.jpg" alt="unite2" width="100%"></a>
+          </ul>
+        </div>
+        <div class="content-leaflet">
+          <div class="text">
+            <img src="images/tekuteku logo.png" alt="tekuteku logo" class="website-logo">
+            <div>
+              依頼を受けて製作しているウェブサイト。既存のロゴをもとに、要望をデザインカンプに落とし込み中。<br><br>更新の利便性を考えてWIXを利用予定。
+            </div>
+          </div>
+          <ul class="images-test">
+            <a href="images/tekuteku (1).jpg" data-lightbox="tekuteku"><img src="images/tekuteku (1).jpg" alt="Leaflet1" width="100%"></a>
           </ul>
         </div>
       </section>
     </main>
-    <a href="#contenter" id="pageTop"><img src="images/icon-back2.png" alt="to top" class="top-back"></a>
-    <footer>
-      <div class="foot">© 2021 Wing All Rights Reserved.</div>
+    <a href="#contenter" id="pageTop"><img src="images/レイヤー 1.png" alt="to top" class="top-back"></a>
+    <footer id="footer">
+      <div class="foot">© 2021 Wing Rights Reserved.</div>
     </footer>
     <script>
       $(function(){
