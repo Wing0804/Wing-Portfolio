@@ -1,0 +1,744 @@
+* {
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/*header*/
+.header-logo {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 10%;
+    color: rgb(255, 255, 255);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    font-family: "fertigo-script",sans-serif;
+}
+
+.background-header {
+    width: 100%;
+    height: 200px;
+    background-image: url(../images/hea.jpg);
+    background-position: left;
+    background-size: cover;/*この場合は高さが自動設定*/
+    background-repeat: no-repeat;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    height: 80px;
+    margin-left: 10%;
+    text-align: right;
+}
+
+.header-nav-p {
+    height: 80px;
+}
+
+.header-nav nav {
+    margin-left: 4%;
+}
+
+.header-nav a {
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    font-family: "fertigo-script",sans-serif;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(0, 26, 255);
+}
+
+/*----------------------------
+* メニュー開閉ボタン
+*----------------------------*/
+.menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.l {
+    right: 10%;
+}
+
+.none {
+    display: none;
+}
+
+.unnone {
+    display: block;
+}
+
+/*----------------------------
+* メニュー本体
+*----------------------------*/
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(23, 18, 87, .7);
+}
+
+.menu__item {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: .5em 1em;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-align: center;
+}
+
+.menu__item a {
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    font-family: "fertigo-script",sans-serif;
+    text-decoration: none;
+}
+
+/*----------------------------
+* アニメーション部分
+*----------------------------*/
+
+/* アニメーション前のメニューの状態 */
+.menu {
+    transform: rotateZ(-90deg);
+    transition: all .3s ease;
+
+    transform-origin: top left;
+}
+/* アニメーション後のメニューの状態 */
+.menu.is-active {
+    transform: rotateZ(0deg);
+}
+
+/*index*/
+
+.background-index {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/photo-1577853219386-6fae370d58673.jpg);
+    background-position: center;
+    background-size: cover;/*この場合は高さが自動設定*/
+    background-repeat: no-repeat;
+    font-style: normal;
+    font-weight: 400;
+    font-family: "fertigo-script",sans-serif;
+}
+
+.index-title {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 10%;
+    margin-top: -80px;
+    color: #ffffff;
+    font-size: 70px;
+    line-height: 80px;
+}
+
+.subline01 {
+    position: absolute;
+    bottom: 50%;
+    left: 46%;
+    transform: rotate(-20deg);
+    color: #ffffff;
+    font-size: xx-large;
+}
+
+.subline02 {
+    position: absolute;
+    right: 10%;
+    bottom: 100px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+/* works */
+.background-works {
+    background-color: rgb(201, 230, 253);
+}
+
+.content {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+}
+
+.page-title {
+    margin-top: 50px;
+    color: rgb(17, 0, 94);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    font-family: "fertigo-script",sans-serif;
+    text-align: center;
+}
+
+.title-text {
+    margin-top: 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: "ten-mincho-text", serif;
+    text-align: center;
+}
+
+.works-genre {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: rgb(17, 0, 94);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    font-family: "fertigo-script",sans-serif;
+    text-align: center;
+}
+
+.underline {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 15px;
+    border-bottom: 1px solid #000000;
+    text-align: center;
+}
+
+.content-poster {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content-leaflet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.leaflet-title {
+    margin-bottom: 5%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: xx-large;
+    font-family: "ten-mincho-text", serif;
+}
+
+.footer-image {
+    width: 15%;
+    text-align: right;
+    min-width: 180px;
+}
+
+.unite-logo {
+    display: block;
+    width: 50%;
+    min-width: 150px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+#b {
+    display: block;
+    width: 128px;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding: 10px;
+    border: 2px solid rgba(23, 18, 87);
+    border-radius: 7px;
+    background-color: rgba(23, 18, 87);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: large;
+    text-decoration: none;
+}
+
+#b:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* interests */
+
+/* カードレイアウト部分をラッピングし、
+Flexboxを指定"space-between"で各アイテムを均等に配置し、
+最初と最後のアイテムを端に寄せます。*/
+#cardlayout-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    margin: 2em auto;
+    margin-top: 50px;
+    margin-bottom: 0;
+    -ms-flex-pack: justify;
+    -ms-flex-wrap: wrap;
+    -webkit-box-pack: justify;
+}
+
+/* リンクテキストの下線を非表示 */
+a.card-link {
+    text-decoration: none;
+}
+
+/* カードレイアウト内の画像を幅いっぱいに表示 */
+#cardlayout-wrap img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.card-figure {
+    margin: 0;
+    padding: 0;
+}
+
+/* カードレイアウトのタイトル部分 */
+.card-title {
+    margin: .6em 0 0;
+    color: #333333;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* カードレイアウトの説明文部分 */
+.card-text-tax {
+    margin: 0;
+    padding: 1em;
+    color: #818181;
+}
+
+.card-text {
+    margin-top: 25px;
+    font-size: 16px;
+}
+
+/* カードレイアウトを1カラムで配置 */
+.card-list {
+    width: 100%;
+    margin: 0 0 50px auto;
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .08);
+    background: #f0f0f0;
+}
+
+/* 画面幅768px以上の場合カードレイアウトを2カラムで配置 */
+@media all and (min-width: 700px) {
+    .card-list {
+        width: calc(90% / 2); /* 96%幅を2で割るという指定 */
+        margin: 0 0;
+        margin-bottom: 50px;
+    }
+
+    .card-list-bottom {
+        margin-bottom: 0px;
+    }
+}
+
+/* 画面幅992px以上の場合カードレイアウトを3カラムで配置 */
+@media all and (min-width: 1000px) {
+    .card-list {
+        width: calc(90% / 3); /* 96%幅を3で割るという指定 */
+        margin: 0 0;
+        margin-bottom: 50px;
+    }
+
+    /* 最後の行が3列より少ない場合左寄せにレイアウトさせる */
+    #cardlayout-wrap::after {
+        display: block;
+        width: calc(90% / 3);
+        content: "";
+    }
+}
+
+/* about me */
+.background-about-me {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/ryan-miller-hEonhaS_fcA-unsplash2.jpg);
+    background-position: center;
+    background-size: cover;/*この場合は高さが自動設定*/
+    background-repeat: no-repeat;
+}
+
+.introduction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-me-title {
+    color: rgb(255, 255, 255);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    font-family: "fertigo-script",sans-serif;
+    text-align: center;
+}
+
+.underline-w {
+    width: 40%;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-top: 15px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    text-align: center;
+}
+
+.icon {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.icon:hover {
+    transform: rotate(360deg);
+    transition-duration: .5s;
+}
+
+.name {
+    color: rgb(255, 255, 255);
+    font-style: normal;
+    font-weight: 400;
+    font-size: x-large;
+    font-family: "ten-mincho-text", serif;
+}
+
+.about-me-text {
+    color: rgb(255, 255, 255);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: "ten-mincho-text", serif;
+}
+
+.icon2 {
+    width: 60px;
+}
+
+.icon2:hover {
+    opacity: .6;
+    transition-duration: .3s;
+}
+
+/* footer　*/
+
+#pageTop {
+    width: 5%;
+    min-width: 50px;
+    position: fixed;
+    right: 10%;
+    bottom: 15px;
+    margin-bottom: -7px;
+    opacity: 0.7;
+}
+
+.top-back {
+    width: 100%;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+}
+
+footer {
+    bottom: 0; /*下に固定*/
+    width: 100%;
+    height: 12vh;
+    background-color: rgb(17, 0, 94);
+}
+
+.foot {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 12vh;
+    text-align: center;
+}
+
+.foot2 {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    text-align: center;
+}
+
+@media screen and (min-width: 701px) {
+    .text {
+        display: block;
+        width: 50%;
+        min-width: 0;
+        padding-right: 5%;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        font-family: "ten-mincho-text", serif;
+        text-align: left;
+        word-break: break-all;
+    }
+
+    .images {
+        width: 50%;
+        min-width: 350px;
+    }
+
+    .poster-image {
+        width: 280px;
+        padding: 0 20px 20px;
+    }
+}
+
+/*メディアクエリ*/
+@media screen and (max-width: 700px) {
+    .p {
+        background-position: bottom;
+    }
+
+    .index-title {
+        position: absolute;
+        top: 20%;
+        bottom: 0;
+        left: 8%;
+        margin: 0;
+        color: rgb(255, 255, 255);
+        font-size: 60px;
+        line-height: 80px;
+    }
+
+    .subline01 {
+        display: none;
+    }
+
+    .content-leaflet {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .text {
+        display: block;
+        width: 90%;
+        min-width: 0;
+        margin-bottom: 25px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        font-family: "ten-mincho-text", serif;
+        text-align: left;
+        word-break: break-all;
+    }
+
+    .images {
+        width: 90%;
+        margin-bottom: 35px;
+    }
+
+    .initial {
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+
+    .poster-image {
+        width: 80%;
+        margin-left: 10%;
+        padding-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .header-logo {
+        margin-top: 25px;
+        font-size: 30px;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .background-header {
+        width: 100%;
+        height: 120px;
+        background-image: url(../images/hea-r.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .space {
+        margin-top: 160px;
+    }
+
+    .page-title {
+        font-size: 30px;
+    }
+
+    .title-text {
+        font-size: 16px;
+    }
+
+    .works-genre {
+        font-size: 30px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .underline {
+        width: 100px;
+        margin-top: 5px;
+    }
+
+    .content-leaflet {
+        width: 100%;
+        padding: 0;
+        margin-bottom: initial;
+    }
+
+    .leaflet-title {
+        margin-bottom: 5%;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 25px;
+        font-family: "ten-mincho-text", serif;
+    }
+
+    .text {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    .foot {
+        font-size: 12px;
+    }
+
+    .foot2 {
+        bottom: 25px;
+        right: 10%;
+        margin: 0 auto;
+        font-size: 24px;
+    }
+
+    .pc {
+        display: none;
+    }
+
+    .introduction {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .about-me-title {
+        margin-top: 30px;
+        color: rgb(255, 255, 255);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        font-family: "fertigo-script",sans-serif;
+        text-align: center;
+    }
+
+    .underline-w {
+        width: 30%;
+        min-width: 200px;
+        margin: 0 auto;
+        padding-top: 15px;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        text-align: center;
+    }
+
+    .icon {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+
+    .icon:hover {
+        transform: rotate(360deg);
+        transition-duration: .5s;
+    }
+
+    .name {
+        color: rgb(255, 255, 255);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        font-family: "ten-mincho-text", serif;
+    }
+
+    .about-me-text {
+        color: rgb(255, 255, 255);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        font-family: "ten-mincho-text", serif;
+    }
+
+    .icon2 {
+        width: 60px;
+    }
+
+    .icon2:hover {
+        opacity: .6;
+        transition-duration: .3s;
+    }
+
+    .initial {
+        margin-top: 0px;
+        margin-bottom: 50px;
+    }
+
+    .fixed {
+        margin-top: -160px;
+        position: fixed;
+        z-index: 9999;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .header-nav-p {
+        display: none;
+    }
+
+    .phone {
+        display: none;
+    }
+}
