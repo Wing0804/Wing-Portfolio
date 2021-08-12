@@ -398,6 +398,7 @@ a.card-link {
 }
 
 .introduction {
+    height: calc(100% - 80px);
     display: flex;
     justify-content: center;
     align-items: center;
